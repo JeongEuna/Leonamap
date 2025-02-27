@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <h2>Leaflet으로 만든 지도</h2>
+    <h2>LeonaMap</h2>
     <div id="map"></div> <!-- 지도를 표시할 공간 -->
 
     <script>
@@ -26,7 +26,12 @@
 
         // 서울 위치에 마커 추가
         L.marker([37.5665, 126.9780]).addTo(map)
-            .bindPopup("여기는 서울입니다!"); 
+            .bindPopup(`
+                <div>
+                    <img src="https://drive.google.com/uc?export=view&id=1ZpiL3zuLBsoUFSSfjxMTyeD7_MSapmoe" width="200px"><br>
+                    <b>용산골막창</b>
+                </div>
+            `); 
 
     </script>
 
