@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <h2> LeonaMap</h2>
+    <h2> ~다시 꺼내보고 싶을 지도~</h2>
     <div id="map"></div>
 
     <script>
@@ -29,25 +29,83 @@
 
         map.fitBounds(bounds);
 
-        L.marker([37.298344, 127.009014]).addTo(map).bindTooltip('수원실내체육관')
-        L.marker([37.299546, 127.006815]).addTo(map).bindTooltip('찌개명가')
-        L.marker([37.299168, 127.007008]).addTo(map).bindTooltip('더벤티 수원송죽점')
+        var greenIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34]
+        });
 
-        // L.marker([37.252779, 127.075367]).addTo(map).bindTooltip('치요')
+        var redIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34]
+        });
 
-        // L.marker([37.375306, 127.008311]).addTo(map).bindTooltip('롯데프리미엄아울렛 의왕점')
+        var violetIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34]
+        });
 
-        // L.marker([37.504677, 127.004591]).addTo(map).bindTooltip('케이스티파이 스튜디오 신세계백화점 강남점')
-        // L.marker([37.507198, 127.009889]).addTo(map).bindTooltip('샤브향반포점')
+        var goldIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-gold.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34]
+        });
+
+        var greyIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-grey.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34]
+        });
+
+        var blackIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34]
+        });
+
+        var orangeIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34]
+        });
+    
+
+
+        L.marker([37.298344, 127.009014], { icon: redIcon}).addTo(map).bindTooltip('수원실내체육관')
+        L.marker([37.299546, 127.006815], { icon: redIcon}).addTo(map).bindTooltip('찌개명가')
+        L.marker([37.299168, 127.007008], { icon: redIcon}).addTo(map).bindTooltip('더벤티 수원송죽점')
+
+        L.marker([37.253301, 127.072327], { icon: orangeIcon}).addTo(map).bindTooltip('월드악기프라자')
+        L.marker([37.252455, 127.075019], { icon: orangeIcon}).addTo(map).bindTooltip('빵빵').bindPopup('커비잡이 실패')
+        L.marker([37.253146, 127.074895], { icon: orangeIcon}).addTo(map).bindTooltip('영통 킹오락실').bindPopup('정은아 농구 압승')
+        L.marker([37.252666, 127.074425], { icon: orangeIcon}).addTo(map).bindTooltip('골든타임 이스케이프')
+        L.marker([37.248826, 127.076622], { icon: orangeIcon}).addTo(map).bindTooltip('호식당')
+        L.marker([37.248868, 127.076773], { icon: orangeIcon}).addTo(map).bindTooltip('FIVE')
+        L.marker([37.252188, 127.075431], { icon: orangeIcon}).addTo(map).bindTooltip('하루필름')
+        L.marker([37.253523, 127.075201], { icon: orangeIcon}).addTo(map).bindTooltip('킹덤볼링장').bindPopup('김용환 볼링 압승')
+        L.marker([37.250672, 127.078341], { icon: orangeIcon}).addTo(map).bindTooltip('반달공원')
+        L.marker([37.257702, 127.078855], { icon: orangeIcon}).addTo(map).bindTooltip('평상')
+        L.marker([37.258430, 127.078202], { icon: orangeIcon}).addTo(map).bindTooltip('달리기 시합')
+        L.marker([37.252745, 127.075343], { icon: orangeIcon}).addTo(map).bindTooltip('경성주막1929 수원영통점')
+
         
-        // L.marker([37.279933, 127.015119]).addTo(map).bindTooltip('츠요이')
-        // L.marker([37.284440, 127.014333]).addTo(map).bindTooltip('행궁그리다')
-        // L.marker([37.283294, 127.014436]).addTo(map).bindTooltip('무무옥')
-
-        // L.marker([37.524254, 126.873452]).addTo(map).bindTooltip('모얼디 MORE:D')
-        // L.marker([37.524202, 126.872163]).addTo(map).bindTooltip('젠틀한 식탁')
-        // L.marker([37.499241, 127.025474]).addTo(map).bindTooltip('스트라이크존 서울강남역구장')
-
+        
         // L.marker([37.536071, 126.960955]).addTo(map).bindTooltip('용산골막창')
         // L.marker([37.542211, 126.958947]).addTo(map).bindTooltip('놀이터')
 
