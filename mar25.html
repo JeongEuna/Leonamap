@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025년 3월</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; }
+        h2 { margin: 20px auto; padding: 10px; text-align: center;}
+        #map { width: 100%; height: 500px; }
+    </style>
+</head>
+<body>
+
+    <h2> LeonaMap</h2>
+    <div id="map"></div>
+
+    <script>
+        var bounds = [
+        [37.5665, 126.9780],
+        [37.243833, 127.077853]
+        ]
+        var map = L.map('map');
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        map.fitBounds(bounds);
+
+        L.marker([37.298344, 127.009014]).addTo(map).bindTooltip('수원실내체육관')
+        L.marker([37.299546, 127.006815]).addTo(map).bindTooltip('찌개명가')
+        L.marker([37.299168, 127.007008]).addTo(map).bindTooltip('더벤티 수원송죽점')
+
+        // L.marker([37.252779, 127.075367]).addTo(map).bindTooltip('치요')
+
+        // L.marker([37.375306, 127.008311]).addTo(map).bindTooltip('롯데프리미엄아울렛 의왕점')
+
+        // L.marker([37.504677, 127.004591]).addTo(map).bindTooltip('케이스티파이 스튜디오 신세계백화점 강남점')
+        // L.marker([37.507198, 127.009889]).addTo(map).bindTooltip('샤브향반포점')
+        
+        // L.marker([37.279933, 127.015119]).addTo(map).bindTooltip('츠요이')
+        // L.marker([37.284440, 127.014333]).addTo(map).bindTooltip('행궁그리다')
+        // L.marker([37.283294, 127.014436]).addTo(map).bindTooltip('무무옥')
+
+        // L.marker([37.524254, 126.873452]).addTo(map).bindTooltip('모얼디 MORE:D')
+        // L.marker([37.524202, 126.872163]).addTo(map).bindTooltip('젠틀한 식탁')
+        // L.marker([37.499241, 127.025474]).addTo(map).bindTooltip('스트라이크존 서울강남역구장')
+
+        // L.marker([37.536071, 126.960955]).addTo(map).bindTooltip('용산골막창')
+        // L.marker([37.542211, 126.958947]).addTo(map).bindTooltip('놀이터')
+
+
+
+    </script>
+</body>
+</html>
